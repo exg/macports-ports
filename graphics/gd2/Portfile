@@ -45,8 +45,6 @@ depends_build               port:gettext \
 depends_lib                 port:freetype \
                             port:fontconfig \
                             path:include/turbojpeg.h:libjpeg-turbo \
-                            port:libavif \
-                            port:libheif \
                             port:libiconv \
                             port:libpng \
                             port:tiff \
@@ -58,13 +56,13 @@ patchfiles                  patch-src-gdft.c.diff
 configure.args-append       --disable-werror \
                             --with-freetype=${prefix} \
                             --with-fontconfig=${prefix} \
-                            --with-avif=${prefix} \
-                            --with-heif=${prefix} \
                             --with-jpeg=${prefix} \
                             --with-png=${prefix} \
                             --with-tiff=${prefix} \
                             --with-webp=${prefix} \
                             --with-zlib=${prefix} \
+                            --without-avif \
+                            --without-heif \
                             --without-liq \
                             --without-raqm \
                             --without-x \
