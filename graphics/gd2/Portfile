@@ -57,13 +57,13 @@ patchfiles                  patch-src-gdft.c.diff
 configure.args-append       --disable-werror \
                             --with-freetype=${prefix} \
                             --with-fontconfig=${prefix} \
-                            --with-heif=${prefix} \
                             --with-jpeg=${prefix} \
                             --with-png=${prefix} \
                             --with-tiff=${prefix} \
                             --with-webp=${prefix} \
                             --with-zlib=${prefix} \
                             --without-avif \
+                            --without-heif \
                             --without-liq \
                             --without-raqm \
                             --without-x \
