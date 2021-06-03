@@ -1,0 +1,26 @@
+--- doc/autoconf.texi
++++ doc/autoconf.texi
+@@ -7887,7 +7887,7 @@ ISO Standard C++ features with extensions, preferring the newest edition
+ of the C++ standard that is supported.  Currently the newest edition
+ Autoconf knows how to detect support for is ISO C++ 2011.  After calling
+ this macro, you can check whether the C++ compiler has been set to
+-accept standard C++ by inspecting the shell variable @code{ac_prog_cc_stdc}.
++accept standard C++ by inspecting the shell variable @code{ac_prog_cxx_stdcxx}.
+ Its value will be @samp{cxx11} or @samp{cxx98}, respectively,
+ if the C++ compiler has been set to use the 2011 or 1990 edition of the
+ C++ standard, and @samp{no} if the compiler does not support compiling
+diff --git a/lib/autoconf/c.m4 b/lib/autoconf/c.m4
+index 9f881f0b..47434c89 100644
+--- lib/autoconf/c.m4
++++ lib/autoconf/c.m4
+@@ -2749,8 +2749,8 @@ AC_DEFUN([_AC_PROG_CXX_STDCXX_EDITION_TRY],
+ [AC_REQUIRE([_AC_CXX_CXX$1_TEST_PROGRAM])]dnl
+ [AS_IF([test x$ac_prog_cxx_stdcxx = xno],
+ [AC_MSG_CHECKING([for $CXX option to enable C++$1 features])
+-AC_CACHE_VAL(ac_cv_prog_cxx_$1,
+-[ac_cv_prog_cxx_$1=no
++AC_CACHE_VAL(ac_cv_prog_cxx_cxx$1,
++[ac_cv_prog_cxx_cxx$1=no
+ ac_save_CXX=$CXX
+ AC_LANG_CONFTEST([AC_LANG_DEFINES_PROVIDED][$][ac_cxx_conftest_cxx$1_program])
+ for ac_arg in '' m4_normalize(m4_defn([_AC_CXX_CXX$1_OPTIONS]))
