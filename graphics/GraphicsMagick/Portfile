@@ -36,7 +36,6 @@ depends_lib-append      port:libxml2 \
                         port:bzip2 \
                         port:xz \
                         port:zlib \
-                        port:libheif \
                         port:libjxl \
                         port:libpng \
                         port:netpbm \
@@ -79,6 +78,7 @@ configure.args-append   --with-jbig=no \
                         --with-xml=yes \
                         --with-ttf=yes \
                         --with-webp=yes \
+                        --without-heif \
                         --without-umem \
                         --enable-shared=yes
 
